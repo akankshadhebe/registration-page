@@ -1,0 +1,245 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+	background-color: #261528;
+	background-size:cover;
+	display: flex;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+
+img{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	z-index: -1;
+}
+
+form{
+	width: 460px;
+    font-family: 'poppins', sans-serif;
+	background-color: #ffffff27;
+	border-top-right-radius: 6%;
+	border-bottom-left-radius: 6%;
+	border-top-left-radius: 0.5%;
+	border-bottom-right-radius: 0.5%;
+	padding: 2rem;
+}
+.login-content img{
+    height: 60px;
+}
+.login-content h2{
+	margin: 15px 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 4.6rem;
+	font-family: Italic;
+}
+.input{
+    background-color: rgb(0, 0, 0);
+}
+.title{
+    text-align: center;
+}
+
+/*validation*/
+.form-control {
+    align-items: center;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+    border: rgb(255, 255, 255);
+    background: #ffffff00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-control input {
+	border: solid hsl(0, 0%, 100%);
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #CD0C77;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 45px;
+	right: 20px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+/*button link*/
+a{
+	display: block;
+	text-align: inline-flex;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+
+a:hover{
+	color: #ffec83;
+}
+
+.btn{
+	display: block;
+	width: 90%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #291C40, #ffec83, #AB509D);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: rgb(255, 255, 255);
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn:hover{
+	background-position: right;
+}
+
+.text{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #CD0C77;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+/*hode media
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img{
+		width: 400px;
+	}
+}
+
+/*@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.login-content{
+		justify-content: center;
+	}
+}
+*/
+.form-control label{
+	color: #f1f1f1;
+}
+/**/
+/* The pop box is shown when the user clicks on the password field */
+#pop {
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	position: relative;
+	width: 400px;
+	padding: 10px;
+	margin-top: 5px;
+  }
+  
+  #pop p {
+	padding: 1px 35px;
+	font-size: 10px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+	color: green;
+  }
+  
+  .valid:before {
+	position: relative;
+	left: -35px;
+	content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+	color: red;
+  }
+  
+  .invalid:before {
+	position: relative;
+	left: -35px;
+	content: "✖";
+  }

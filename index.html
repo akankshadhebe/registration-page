@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<img src="0ba9be7db3ec195a3130a3c8e68a4133.jpg">
+    <!-- <img class="wave" src=""> -->
+	<div class="container">
+		<div class="login-content">
+			<form action="registration.php" method="post" id="form">
+				<h2 class="title">Sign Up</h2>
+                <form id="form" class="form" action="registration.php" method="post">                        
+                        <div class="form-control">
+                            <label>Username</label>
+                            <input type="text" placeholder="Enter Username" id="username" name="username"  />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter Email" id="email" name="email"/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control" id="input">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter Password" id="password" name="password" onkeyup="return validate()">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                            <div id="pop">
+                                <p>Password must contain the following:</p>
+                                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                <p id="number" class="invalid">A <b>number</b></p>
+                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label>Password check</label>
+                            <input type="password" placeholder="Confirm Password" id="Confirm" name="Confirm"/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                            <center><input type="submit" class="btn" value="Signup"></center>
+                            <div class="text">
+                            Already a member? <a href="login.html">Login Here</a>
+                            </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>
